@@ -1,6 +1,6 @@
 # react-native-original-style
 
-test
+Introducing 'Original Style,' a powerful React Native UI library designed to bring simplicity and flexibility to your mobile app development. Inspired by the elegance of Tailwind CSS, 'Original Style' offers a unique approach to styling React Native components, providing a seamless and efficient way to build beautiful user interfaces
 
 ## Installation
 
@@ -11,11 +11,13 @@ npm install react-native-original-style
 ## Usage
 
 ```js
-import { multiply } from 'react-native-original-style';
+import { View, Text } from 'react-native-original-style';
 
 // ...
 
-const result = await multiply(3, 7);
+  <View center>
+    <Text color-primary size-xl>Test</Text>
+  <View>
 ```
 
 ## Contributing
@@ -25,7 +27,3 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 ## License
 
 MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
