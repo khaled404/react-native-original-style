@@ -20,12 +20,12 @@ export interface Flex extends ConfigProperties<'flex', KeyOf<ConfigSpaces>> {
   'self-end': 'align-self-end';
   'self-center': 'align-self-center';
   'self-stretch': 'align-self-stretch';
-  'content-start': 'align-content-start';
-  'content-end': 'align-content-end';
-  'content-center': 'align-content-center';
-  'content-between': 'align-content-between';
-  'content-around': 'align-content-around';
-  'content-evenly': 'align-content-evenly';
+  'justify-start': 'justify-content-start';
+  'justify-end': 'justify-content-end';
+  'justify-center': 'justify-content-center';
+  'justify-between': 'justify-content-between';
+  'justify-around': 'justify-content-around';
+  'justify-evenly': 'justify-content-evenly';
   'nowrap': 'nowrap';
   'wrap': 'wrap';
   'wrap-reverse': 'wrap-reverse';
@@ -39,16 +39,6 @@ export interface Margin {
   mb: number;
   mh: number;
   mv: number;
-}
-
-export interface Padding {
-  p: number;
-  pl: number;
-  pr: number;
-  pt: number;
-  pb: number;
-  ph: number;
-  pv: number;
 }
 
 export interface Padding {
@@ -80,5 +70,4 @@ export interface CommonStyle
     Border,
     ConfigProperties<KeyOf<Margin>, KeyOf<ConfigSpaces>>,
     ConfigProperties<KeyOf<WidthHeight>, KeyOf<ConfigSpaces>>,
-    ConfigProperties<KeyOf<Padding>, KeyOf<ConfigSpaces>>,
     ConfigProperties<KeyOf<Padding>, KeyOf<ConfigSpaces>> {}

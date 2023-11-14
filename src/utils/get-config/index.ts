@@ -10,3 +10,5 @@ export const getConfig = (): typeof defaultThemeConfig => {
     return defaultThemeConfig;
   }
 };
+
+export const configTheme = getConfig();

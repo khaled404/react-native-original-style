@@ -100,6 +100,7 @@ export const from1to100 = {
   '98': 98,
   '99': 99,
   '100': 100,
+  'full': '100%',
 };
 export const fontWeight = {
   '100': 100,
