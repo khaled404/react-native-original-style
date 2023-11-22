@@ -1,7 +1,7 @@
 module.exports = {
   colors: {
     default: '#fff0',
-    main: '#000',
+    main: '#ef0',
     second: '#333',
     error: '#bb2124',
     success: '#22bb33',
