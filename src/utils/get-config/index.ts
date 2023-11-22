@@ -1,13 +1,15 @@
-import { defaultThemeConfig } from '../../config';
 import { mergeObjects } from '../merge-objects';
 
-export const getConfig = (): typeof defaultThemeConfig => {
+export const getConfig = () => {
   try {
+    const defaultThemeConfig = require('../../config').defaultThemeConfig;
+
     const themeConfig = require('original.config.js');
     if (themeConfig) return mergeObjects(defaultThemeConfig, themeConfig);
+
     return defaultThemeConfig;
   } catch (error) {
-    return defaultThemeConfig;
+    return require('../../config')?.defaultThemeConfig;
   }
 };
 
