@@ -8,13 +8,7 @@ interface IViewProps extends ViewProps, MakeBooleanTypes<OriginalViewStyle> {
 }
 
 const View = ({ children, ...restProps }: IViewProps) => {
-  const { style, ...rest } = transformProps(restProps);
-
-  return (
-    <ViewBase style={[style, restProps.style]} {...rest}>
-      {children}
-    </ViewBase>
-  );
+  return <ViewBase {...transformProps(restProps)}>{children}</ViewBase>;
 };
 
 export { View };

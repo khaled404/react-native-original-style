@@ -7,13 +7,7 @@ interface ITextProps extends TextProps, MakeBooleanTypes<OriginalTextStyle> {
 }
 
 const Text = ({ children, ...restProps }: ITextProps) => {
-  const { style, ...rest } = transformProps(restProps);
-
-  return (
-    <TextBase style={[style, restProps.style]} {...rest}>
-      {children}
-    </TextBase>
-  );
+  return <TextBase {...transformProps(restProps)}>{children}</TextBase>;
 };
 
 export { Text };
