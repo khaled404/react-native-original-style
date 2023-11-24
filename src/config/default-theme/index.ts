@@ -1,4 +1,4 @@
-import { fontWeight, from1to100 } from '../values';
+import { fontWeight, sizes } from '../values';
 
 export const defaultThemeConfig = {
   colors: {
@@ -30,7 +30,7 @@ export const defaultThemeConfig = {
     lg: 25,
     xl: 30,
     xxl: 35,
-    ...from1to100,
+    ...sizes,
   },
   fontWeight: {
     bold: 'bold',
@@ -38,12 +38,12 @@ export const defaultThemeConfig = {
     ...fontWeight,
   },
   radius: {
-    ...from1to100,
+    ...sizes,
   },
   spaces: {
     horizontal: 20,
     vertical: 20,
-    ...from1to100,
+    ...sizes,
   },
   combinations: {
     rowCenter: {
@@ -52,5 +52,10 @@ export const defaultThemeConfig = {
       flexDirection: 'row',
     },
     center: { alignItems: 'center', justifyContent: 'center' },
+  },
+
+  guideline: {
+    width: 350,
+    height: 680,
   },
 };

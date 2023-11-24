@@ -1,8 +1,8 @@
 module.exports = {
   colors: {
     default: '#fff0',
-    main: '#ef0',
-    second: '#333',
+    primary: '#000',
+    secondary: '#333',
     error: '#bb2124',
     success: '#22bb33',
     info: '#5bc0de',
@@ -34,5 +34,9 @@ module.exports = {
     vertical: 20,
     divide: 10,
     stander: 5,
+  },
+  guideline: {
+    width: 350,
+    height: 680,
   },
 };

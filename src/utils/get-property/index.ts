@@ -4,6 +4,7 @@ import { deepKeyExists } from '../deep-key-exists';
 import { configTheme } from '../get-config';
 import { getFirstWordInCamelCase } from '../get-first-word-In-camel-case';
 import { getStyleKey } from '../get-style-key';
+import { getPropertyValueScaleSize } from '../scale-size';
 
 const styleObj = sty as AnyObject;
 
@@ -40,7 +41,9 @@ const getProperty = (name: string, value: string) => {
         typeof styleObj[key] === 'object' && deepKeyExists(styleObj[key], name)
     )
     .reduce((styles, key) => {
-      styles[styleObj[key][name]] = isNaN(+value) ? value : +value;
+      styles[styleObj[key][name]] = isNaN(+value)
+        ? value
+        : getPropertyValueScaleSize(styleObj[key][name], +value);
       return styles;
     }, {} as AnyObject);
 };

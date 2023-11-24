@@ -15,7 +15,7 @@ export default function App() {
         w-full
         h-full
       >
-        <Text color-success size-60 p-20 pv-100>
+        <Text color-success size-40 p-20 pv-100>
           Test
         </Text>
       </View>
