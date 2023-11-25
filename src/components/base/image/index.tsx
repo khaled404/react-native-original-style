@@ -4,8 +4,9 @@ import FastImage, {
   type ResizeMode,
   type Source,
 } from 'react-native-fast-image';
-import { View, type ViewProps } from '../view';
+import { View } from '../view';
 import type { ImageRequireSource } from 'react-native';
+import type { ViewProps } from '../../../types';
 
 export interface ImageProps extends Omit<ViewProps, 'children'> {
   uri?: Source['uri'];

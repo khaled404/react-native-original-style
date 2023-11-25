@@ -4,9 +4,8 @@ import type {
   OriginalTextStyle,
   OriginalViewStyle,
 } from '../../types';
+import { filterProps } from '../filter-props';
 import { getStyleProperties } from '../get-property';
-
-import { getStyleKey } from '../get-style-key';
 
 type TransformProps =
   | MakeBooleanTypes<OriginalViewStyle>
@@ -21,27 +20,4 @@ export const transformProps = (props: TransformProps): AnyObject => {
   const styleObj = getStyleProperties(styles);
 
   return { style: [style, styleObj], ...rest };
-};
-
-const filterProps = (props: AnyObject) => {
-  let newProps = {
-    styles: {},
-    restProps: {
-      style: {},
-    },
-  };
-
-  for (const key in props) {
-    const element = props[key];
-    const targetProp = getStyleKey(key) ? 'styles' : 'restProps';
-    newProps = {
-      ...newProps,
-      [targetProp]: {
-        ...newProps[targetProp],
-        [key]: element,
-      },
-    };
-  }
-
-  return newProps;
 };

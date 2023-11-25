@@ -53,7 +53,6 @@ export const defaultThemeConfig = {
     },
     center: { alignItems: 'center', justifyContent: 'center' },
   },
-
   guideline: {
     width: 350,
     height: 680,

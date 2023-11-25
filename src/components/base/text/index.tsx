@@ -3,8 +3,8 @@ import {
   Text as TextBase,
   type TextProps as TextBaseProps,
 } from 'react-native';
-import type { OriginalTextStyle, MakeBooleanTypes } from '../../types';
-import { transformProps } from '../../utils';
+import { transformProps } from '../../../utils';
+import type { MakeBooleanTypes, OriginalTextStyle } from '../../../types';
 interface TextProps extends TextBaseProps, MakeBooleanTypes<OriginalTextStyle> {
   children: React.ReactNode;
 }

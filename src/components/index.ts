@@ -1,3 +1,3 @@
-export * from './text';
-export * from './view';
-export * from './image';
+export * from './scrollable';
+export * from './touchable';
+export * from './base';
