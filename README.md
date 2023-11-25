@@ -10,6 +10,10 @@ Introducing 'Original Style,' a powerful React Native UI library designed to bri
 npm install react-native-original-style react-native-fast-image
 ```
 
+```sh
+cd ios && pod install && cd ..
+```
+
 ## Usage
 
 ```js
