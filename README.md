@@ -4,8 +4,10 @@ Introducing 'Original Style,' a powerful React Native UI library designed to bri
 
 ## Installation
 
+**Note: You must be using React Native 0.60.0 or higher.**
+
 ```sh
-npm install react-native-original-style
+npm install react-native-original-style react-native-fast-image
 ```
 
 ## Usage

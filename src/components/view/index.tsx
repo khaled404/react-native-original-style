@@ -1,13 +1,18 @@
 import React from 'react';
-import { View as ViewBase, type ViewProps } from 'react-native';
+import {
+  View as ViewBase,
+  type ViewProps as ViewBaseProps,
+} from 'react-native';
 import type { MakeBooleanTypes, OriginalViewStyle } from '../../types';
 import { transformProps } from '../../utils';
 
-interface IViewProps extends ViewProps, MakeBooleanTypes<OriginalViewStyle> {
+export interface ViewProps
+  extends ViewBaseProps,
+    MakeBooleanTypes<OriginalViewStyle> {
   children: React.ReactNode;
 }
 
-const View = ({ children, ...restProps }: IViewProps) => {
+const View = ({ children, ...restProps }: ViewProps) => {
   return <ViewBase {...transformProps(restProps)}>{children}</ViewBase>;
 };
 
