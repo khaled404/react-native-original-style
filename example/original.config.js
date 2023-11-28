@@ -35,6 +35,22 @@ module.exports = {
     divide: 10,
     stander: 5,
   },
+  fontWeight: {
+    bold: 'bold',
+    normal: 'normal',
+  },
+  radius: {
+    horizontal: 20,
+    vertical: 20,
+  },
+  combinations: {
+    rowCenter: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      flexDirection: 'row',
+    },
+    center: { alignItems: 'center', justifyContent: 'center' },
+  },
   guideline: {
     width: 350,
     height: 680,
