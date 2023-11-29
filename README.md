@@ -2,6 +2,14 @@
 
 Introducing 'Original Style,' a powerful React Native UI library designed to bring simplicity and flexibility to your mobile app development. Inspired by the elegance of Tailwind CSS, 'Original Style' offers a unique approach to styling React Native components, providing a seamless and efficient way to build beautiful user interfaces
 
+<p align="left">
+  <a href="https://npmjs.com/package/react-native-original-style">
+    <img src="https://img.shields.io/npm/v/react-native-original-style.svg" alt="react-native-original-style on npm" />
+    <a href="https://npmjs.com/package/react-native-original-style"><img src="https://img.shields.io/npm/dm/react-native-original-style.svg"/></a>
+    <a href="https://npmjs.com/package/react-native-original-style"><img src="https://img.shields.io/npm/l/react-native-original-style.svg?color=blue"/></a>
+  </a>
+</p>
+
 ## Installation
 
 **Note: You must be using React Native 0.60.0 or higher.**

@@ -36,7 +36,14 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "ui",
+    "ui-design",
+    "styled-components",
+    "tailwind",
+    "tailwindcss",
+    "uikit",
+    "ui-components"
   ],
   "repository": "https://github.com/khaled404/react-native-original-style",
   "author": "khaled mahmoud <khaled.ma805@gmail.com> (https://github.com/khaled404)",
