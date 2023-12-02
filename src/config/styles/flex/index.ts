@@ -32,4 +32,11 @@ export const flexWrap = {
   'wrap': 'wrap',
   'wrap-reverse': 'wrap-reverse',
 };
+export const direction = {
+  'dir-rtl': 'rtl',
+  'dir-ltr': 'ltr',
+};
+
 export const flex = 'flex';
+export const rowGap = 'rowGap';
+export const columnGap = 'columnGap';

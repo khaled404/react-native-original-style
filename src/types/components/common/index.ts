@@ -1,55 +1,18 @@
+import * as flex from '../../../config/styles/flex';
+import * as sizing from '../../../config/styles/sizing';
+
 import type {
   ConfigBorderRadius,
   ConfigColors,
   ConfigSpaces,
+  GetStylesType,
 } from '../../config';
 import type { ConfigProperties, KeyOf } from '../../helpers';
 
-export interface Flex extends ConfigProperties<'flex', KeyOf<ConfigSpaces>> {
-  'row': 'direction-row';
-  'row-reverse': 'direction-row-reverse';
-  'column': 'direction-column';
-  'column-reverse': 'direction-column-reverse';
-  'items-start': 'align-items-start';
-  'items-end': 'align-items-end';
-  'items-center': 'align-items-center';
-  'items-stretch': 'align-items-stretch';
-  'items-baseline': 'align-items-baseline';
-  'self-auto': 'align-self-auto';
-  'self-start': 'align-self-start';
-  'self-end': 'align-self-end';
-  'self-center': 'align-self-center';
-  'self-stretch': 'align-self-stretch';
-  'justify-start': 'justify-content-start';
-  'justify-end': 'justify-content-end';
-  'justify-center': 'justify-content-center';
-  'justify-between': 'justify-content-between';
-  'justify-around': 'justify-content-around';
-  'justify-evenly': 'justify-content-evenly';
-  'nowrap': 'nowrap';
-  'wrap': 'wrap';
-  'wrap-reverse': 'wrap-reverse';
-  'flex': number;
-}
-export interface Margin {
-  m: number;
-  ml: number;
-  mr: number;
-  mt: number;
-  mb: number;
-  mh: number;
-  mv: number;
-}
+export type Flex = GetStylesType<typeof flex, string, number> &
+  GetStylesType<typeof flex, object>;
 
-export interface Padding {
-  p: number;
-  pl: number;
-  pr: number;
-  pt: number;
-  pb: number;
-  ph: number;
-  pv: number;
-}
+export type Sizing = GetStylesType<typeof sizing, object, number>;
 
 export interface Border
   extends ConfigProperties<'b-color', KeyOf<ConfigColors>>,
@@ -59,15 +22,9 @@ export interface Border
   'b-color': 'border-color' | string;
   'b-radius': 'border-radius' | number;
 }
-export type WidthHeight = {
-  w: number;
-  h: number;
-};
+
 export interface CommonStyle
   extends Flex,
-    Margin,
-    Padding,
+    Sizing,
     Border,
-    ConfigProperties<KeyOf<Margin>, KeyOf<ConfigSpaces>>,
-    ConfigProperties<KeyOf<WidthHeight>, KeyOf<ConfigSpaces>>,
-    ConfigProperties<KeyOf<Padding>, KeyOf<ConfigSpaces>> {}
+    ConfigProperties<KeyOf<Sizing>, KeyOf<ConfigSpaces>> {}

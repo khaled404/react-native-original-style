@@ -1,4 +1,11 @@
 import type { defaultThemeConfig } from '../../config';
+import type {
+  ChangeValue,
+  FilterObjectByValueType,
+  UnionObjectsToObj,
+  UnionToObj,
+  ValueOf,
+} from '../helpers';
 
 export type TConfig = typeof defaultThemeConfig;
 
@@ -26,3 +33,14 @@ export type ConfigFontWeight = {
   [key in keyof TConfig['fontWeight']]: string;
 };
 export interface OriginalStyleConfig extends Partial<TConfig> {}
+
+export type GetStylesType<
+  T,
+  ValueType,
+  Value = undefined
+> = ValueType extends string
+  ? UnionToObj<ValueOf<FilterObjectByValueType<T, ValueType>>, Value>
+  : ChangeValue<
+      UnionObjectsToObj<ValueOf<FilterObjectByValueType<T, ValueType>>>,
+      Value
+    >;
