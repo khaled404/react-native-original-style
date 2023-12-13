@@ -41,9 +41,20 @@ const getProperty = (name: string, value: string) => {
         typeof styleObj[key] === 'object' && deepKeyExists(styleObj[key], name)
     )
     .reduce((styles, key) => {
-      styles[styleObj[key][name]] = isNaN(+value)
-        ? value
-        : getPropertyValueScaleSize(styleObj[key][name], +value);
+      if (typeof value === 'boolean') {
+        styles[key] = styleObj[key][name];
+        return styles;
+      }
+
+      if (isNaN(+value)) {
+        styles[styleObj[key][name]] = value;
+        return styles;
+      }
+
+      styles[styleObj[key][name]] = getPropertyValueScaleSize(
+        styleObj[key][name],
+        +value
+      );
       return styles;
     }, {} as AnyObject);
 };
