@@ -1,4 +1,4 @@
-import { fontWeight, sizes } from '../values';
+import { fontWeight, sizes, opacity } from '../values';
 
 export const defaultThemeConfig = {
   colors: {
@@ -45,6 +45,8 @@ export const defaultThemeConfig = {
     vertical: 20,
     ...sizes,
   },
+
+  opacity,
   combinations: {
     rowCenter: {
       alignItems: 'center',

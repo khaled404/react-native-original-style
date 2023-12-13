@@ -3,7 +3,6 @@ import type {
   ChangeValue,
   FilterObjectByValueType,
   UnionObjectsToObj,
-  UnionToObj,
   ValueOf,
 } from '../helpers';
 
@@ -20,6 +19,9 @@ export type ConfigFontSizes = {
 export type ConfigSpaces = {
   [key in keyof TConfig['spaces']]: string;
 };
+export type ConfigOpacity = {
+  [key in keyof TConfig['opacity']]: string;
+};
 
 export type ConfigBorderRadius = {
   [key in keyof TConfig['radius']]: string;
@@ -34,13 +36,7 @@ export type ConfigFontWeight = {
 };
 export interface OriginalStyleConfig extends Partial<TConfig> {}
 
-export type GetStylesType<
-  T,
-  ValueType,
-  Value = undefined
-> = ValueType extends string
-  ? UnionToObj<ValueOf<FilterObjectByValueType<T, ValueType>>, Value>
-  : ChangeValue<
-      UnionObjectsToObj<ValueOf<FilterObjectByValueType<T, ValueType>>>,
-      Value
-    >;
+export type GetStylesType<T, Value = undefined> = ChangeValue<
+  UnionObjectsToObj<ValueOf<FilterObjectByValueType<T, object>>>,
+  Value
+>;

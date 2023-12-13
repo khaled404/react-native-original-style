@@ -36,7 +36,3 @@ export const direction = {
   'dir-rtl': 'rtl',
   'dir-ltr': 'ltr',
 };
-
-export const flex = 'flex';
-export const rowGap = 'rowGap';
-export const columnGap = 'columnGap';
